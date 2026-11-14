@@ -12,14 +12,7 @@
 
 ### 方式 A：装成 WorkBuddy 专家（推荐）
 
-专家包根就是本仓库根，克隆到专家目录即可：
-
-```bash
-git clone https://github.com/wenrs-lab/ai-delivery-pm.git \
-  "$HOME/.workbuddy/plugins/marketplaces/my-experts/plugins/ai-delivery-pm"
-```
-
-或者用仓库自带的安装脚本（会一并写入 `marketplace.json`，无需手改）：
+**先克隆到任意普通目录，再运行安装脚本**（脚本会自动把专家包放到正确位置，并写入 `marketplace.json` 完成注册）：
 
 ```bash
 git clone https://github.com/wenrs-lab/ai-delivery-pm.git
@@ -28,6 +21,8 @@ cd ai-delivery-pm
 ```
 
 安装完成后打开 **专家中心 → 我的专家**，找到「程必达 / AI 交付项目经理」即可开聊。
+
+> 不要直接把仓库 clone 到 `my-experts/plugins/` 下：那样缺少 `marketplace.json` 注册项，专家不会出现在列表里，而且 `install.sh` 出于保护不会覆盖已存在的目录。
 
 自定义 WorkBuddy 配置目录时：
 
@@ -51,7 +46,7 @@ WORKBUDDY_CONFIG_DIR=/path/to/config ./install.sh
 
 ### 方式 C：下载 ZIP
 
-不方便用 git 时，直接下仓库 ZIP，解压后把目录改名为 `ai-delivery-pm`，放到方式 A 的路径下，再运行 `./install.sh` 完成注册。
+不方便用 git 时，下载仓库 ZIP 并解压到任意普通目录，进入解压后的目录运行 `./install.sh`，同样会自动放置并完成注册。
 
 ---
 
@@ -121,7 +116,7 @@ ai-delivery-pm/
 - 改模板字段 → `skills/ai-delivery-playbook/templates/`
 - 换头像 → 覆盖 `avatars/expert.png`（PNG/JPG，512×512，≤500KB）
 
-改完 `plugin.json` 后，如果是在本机专家目录里改的，需重新运行注册脚本或 `./install.sh` 让市场清单刷新。
+改完 `plugin.json` 后，如果是在本机专家目录里直接改的，需重新运行注册脚本刷新市场清单（`install.sh` 不会覆盖已安装目录）。
 
 ---
 
