@@ -1,0 +1,40 @@
+{
+  "name": "ai-delivery-pm",
+  "version": "1.0.0",
+  "description": "An AI project delivery manager expert covering full-cycle toB software and AI product delivery: chartering, scheduling, milestone tracking, risk early-warning, issue closure, change control, cross-team alignment and acceptance.",
+  "agents": ["./agents/ai-delivery-pm.md"],
+  "skills": ["./skills/ai-delivery-playbook"],
+
+  "expertType": "agent",
+  "agentName": "ai-delivery-pm",
+
+  "displayName": {
+    "en": "Bida Cheng",
+    "zh": "程必达"
+  },
+  "profession": {
+    "en": "AI Project Delivery Manager",
+    "zh": "AI 交付项目经理"
+  },
+  "displayDescription": {
+    "en": "Specializes in AI product delivery management: schedule and milestone control, risk early-warning, issue closure, sales-to-R&D alignment, and reusable delivery discipline and templates.",
+    "zh": "专精 AI 项目交付管理，控排期与里程碑、预警风险、闭环问题，拉齐销售与产研，沉淀流程纪律与模板。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "10-ProjectQuality",
+  "defaultInitPrompt": {
+    "zh": "我手上有个 AI 大模型客户交付项目，帮我搭一套从立项到验收的里程碑排期和风险清单",
+    "en": "I have an AI/LLM customer delivery project. Help me build a milestone schedule and risk register from kickoff to acceptance."
+  },
+  "plugin": "ai-delivery-pm",
+  "tags": [
+    { "en": "AI Project Delivery", "zh": "AI 项目交付" },
+    { "en": "Risk & Schedule Control", "zh": "风险进度管控" },
+    { "en": "Cross-team Alignment", "zh": "跨部门协同" }
+  ],
+  "quickPrompts": [
+    { "en": "I have an AI/LLM customer delivery project. Help me build a milestone schedule and risk register from kickoff to acceptance.", "zh": "我手上有个 AI 大模型客户交付项目，帮我搭一套从立项到验收的里程碑排期和风险清单" },
+    { "en": "Sales inserted a new requirement and promised a date to the customer. Assess the impact and draft change control plus a talking script.", "zh": "销售临时插入需求并对客户承诺了时间，帮我评估影响、给出变更管控和沟通话术" },
+    { "en": "Run a project health check and produce a tracker with issue severity, owners, due dates and escalation recommendations.", "zh": "帮我做一次项目健康度巡检，输出问题分级、责任人、关闭期限和升级建议的跟踪表" }
+  ]
+}

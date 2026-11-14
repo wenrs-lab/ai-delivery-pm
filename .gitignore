@@ -1,0 +1,9 @@
+.DS_Store
+.gitkeep
+*.swp
+*.swo
+*~
+__pycache__/
+*.pyc
+.idea/
+.vscode/
