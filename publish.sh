@@ -74,7 +74,7 @@ PY
 
 echo "[2/3] Pushing main..."
 cd "$REPO_DIR"
-git -c credential.helper= -c core.askPass="$ASKPASS" push -u origin main
+git -c credential.helper= -c core.askPass="$ASKPASS" -c http.version=HTTP/1.1 push -u origin main
 
 echo "[3/3] Verifying remote contents..."
 GITHUB_TOKEN="$GITHUB_TOKEN" OWNER="$OWNER" REPO="$REPO" python3 - <<'PY'
